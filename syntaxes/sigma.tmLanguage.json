@@ -41,11 +41,15 @@
 			"patterns": [
                 {
 					"name": "keyword.declaration.sigma", 
-					"match": "(?<=\\s|^)(func|in|u8|u16|u32|u64|i8|i16|i32|i64|f32|f64|bool|void|char|string)(?=\\s|$)"
+					"match": "\\b(func|in|u8|u16|u32|u64|i8|i16|i32|i64|f32|f64|int|bool|void|char|string|impl|any)\\b"
 				},
 				{
 					"name": "keyword.control.sigma",
-					"match": "(?<=\\s|^)(if|else|switch|continue|break|while|loop|for|import)(?=\\s|$)"
+					"match": "\\b(if|else|switch|continue|break|while|loop|for|import|return|trace|case)\\b"
+				},
+				{
+					"name": "keyword.declaration.sigma",
+					"match": "\\b(true|false|null)\\b"
 				}
 			]
 		},
@@ -102,11 +106,11 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.sigma",
-					"match": "(?<=(func)\\s+)(\\S+)"
+					"match": "(?<=(func\\s+|::))(\\S+)"
 				},
                 {
 					"name": "entity.name.function.sigma",
-					"match": "(?<=\\s|^)(\\S+)(?=\\s?\\()"
+					"match": "\\b\\w+\\("
 				},
                 {
 					"name": "constant.numeric.sigma",

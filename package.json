@@ -28,7 +28,8 @@
 				],
 				"extensions": [
 					".si"
-				]
+				],
+        "configuration": "./language-configuration.json"
 			}
 		],
 		"grammars": [
